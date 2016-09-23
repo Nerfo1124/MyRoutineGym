@@ -27,7 +27,8 @@
         android:id="@+id/btnGrupoTres"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="viewGrupoTres (Principal)" />
 
     <Button
         android:text="Rutina de Pierna"
@@ -37,7 +38,8 @@
         android:layout_above="@+id/btnGrupoDos"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="15dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="viewGrupoUno (Principal)" />
 
     <Button
         android:text="Rutina de Hombros y Espalda"
@@ -47,5 +49,6 @@
         android:layout_marginBottom="16dp"
         android:layout_above="@+id/btnGrupoTres"
         android:layout_alignParentStart="true"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="viewGrupoDos (Principal)" />
 </RelativeLayout>

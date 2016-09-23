@@ -12,7 +12,6 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import co.com.nerfo.myroutinegym.R;
 import co.com.nerfo.myroutinegym.dao.EjercicioDAO;
 import co.com.nerfo.myroutinegym.vo.EjercicioVO;
 
