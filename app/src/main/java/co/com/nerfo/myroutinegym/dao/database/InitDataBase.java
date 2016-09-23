@@ -91,7 +91,7 @@ public class InitDataBase extends SQLiteOpenHelper {
 
     public static final String INSERT_EJERCICIO_15 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('ABD', 4, 15, 'ABD.png', 1)";
+                    + "VALUES ('ABD', 4, 15, 'abd.png', 1)";
 
     public static final String INSERT_EJERCICIO_16 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
