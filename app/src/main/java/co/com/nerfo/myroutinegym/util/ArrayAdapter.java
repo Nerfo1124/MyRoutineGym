@@ -12,6 +12,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import co.com.nerfo.myroutinegym.R;
+import co.com.nerfo.myroutinegym.dao.EjercicioDAO;
 import co.com.nerfo.myroutinegym.vo.EjercicioVO;
 
 /**
@@ -25,8 +27,8 @@ public class ArrayAdapter extends android.widget.ArrayAdapter<EjercicioVO> {
     private final Context context;
     private final List<EjercicioVO> ejercicioList;
 
-    public ArrayAdapter(Context context, List<EjercicioVO> ejercicioList) {
-        super(context, R.layout.activity_ejercicios, ejercicioList);
+    public ArrayAdapter(Context context, Integer idActivity, List<EjercicioVO> ejercicioList) {
+        super(context, idActivity, ejercicioList);
         this.context = context;
         this.ejercicioList = ejercicioList;
     }
@@ -42,9 +44,12 @@ public class ArrayAdapter extends android.widget.ArrayAdapter<EjercicioVO> {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         // Se agregan objetos a la lista principal.
-        friendInfoView = inflater.inflate(R.layout.layout_ejercicio, parent, false);
+        friendInfoView = inflater.inflate(R.layout.layout_excersise, parent, false);
         TextView txtEjercicio = (TextView) friendInfoView.findViewById(R.id.txtNameEjercicio);
+        TextView txtSerieRepeticion = (TextView) friendInfoView.findViewById(R.id.txtSerieRepeticion);
+
         txtEjercicio.setText(ejercicioList.get(position).getNombreEjercicio());
+        txtSerieRepeticion.setText("Series: "+ejercicioList.get(position).getSeries()+" - Repeticiones: "+ejercicioList.get(position).getRepeticiones());
 
         // Fragmento de codigo encargado de asignar una imagen al imageView
         ImageView imageView = (ImageView) friendInfoView.findViewById(R.id.avatar);

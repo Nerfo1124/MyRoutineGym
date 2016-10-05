@@ -37,8 +37,10 @@ public class EjercicioDAO {
         try {
             List<EjercicioVO> listaEjercicios = new ArrayList<>();
             StringBuilder sql = new StringBuilder();
-            sql.append("SELECT * FROM ").append(dbh.TABLE_EJERCICIO);
-            sql.append(" WHERE ").append(dbh.ID_EJERCICIO).append(" = ").append(idGrupoEjercicio);
+            sql.append("SELECT ").append(dbh.ID_EJERCICIO+", ").append(dbh.NOMBRE_EJERCICIO+", ");
+            sql.append(dbh.SERIES+", ").append(dbh.REPETICIONES+", ").append(dbh.URL_IMAGEN);
+            sql.append(" FROM ").append(dbh.TABLE_EJERCICIO);
+            sql.append(" WHERE ").append(dbh.FK_ID_GRUPO).append(" = ").append(idGrupoEjercicio);
 
             Log.i(TAG_LOG, "[listByIdGrupo] SQL: " + sql.toString());
 
@@ -51,7 +53,6 @@ public class EjercicioDAO {
                     vo.setSeries(listEjercicios.getInt(2));
                     vo.setRepeticiones(listEjercicios.getInt(3));
                     vo.setUrlImagen(listEjercicios.getString(4));
-                    vo.setIdGrupo(listEjercicios.getInt(5));
                     listaEjercicios.add(vo);
                 } while (listEjercicios.moveToNext());
             }

@@ -27,7 +27,6 @@ public class InitDataBase extends SQLiteOpenHelper {
                     + ID_EJERCICIO + " integer primary key autoincrement not null, "
                     + NOMBRE_EJERCICIO + " text not null, "
                     + SERIES + " integer not null, "
-                    + NOMBRE_EJERCICIO + " text not null, "
                     + REPETICIONES + " integer not null, "
                     + URL_IMAGEN + " text, "
                     + FK_ID_GRUPO + " integer "
@@ -35,99 +34,99 @@ public class InitDataBase extends SQLiteOpenHelper {
 
     public static final String INSERT_EJERCICIO_1 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Leg Press', 4, 12, 'Leg_Press.png', 1)";
+                    + "VALUES ('Leg Press', 4, 12, 'legpress.png', 1)";
 
     public static final String INSERT_EJERCICIO_2 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Tijeras', 4, 12, 'Tijera.png', 1)";
+                    + "VALUES ('Tijeras', 4, 12, 'tijeras.png', 1)";
 
     public static final String INSERT_EJERCICIO_3 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Leg Extension', 4, 15, 'Leg_Extension.png', 1)";
+                    + "VALUES ('Leg Extension', 4, 15, 'legextension.png', 1)";
 
     public static final String INSERT_EJERCICIO_4 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Extension Gluteio m/g', 4, 12, 'Extension_Gluteo.png', 1)";
+                    + "VALUES ('Extension Gluteo m/g', 4, 12, 'extensiongluteos.png', 1)";
 
     public static final String INSERT_EJERCICIO_5 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Leg Curl', 4, 12, 'Leg_Curl.png', 1)";
+                    + "VALUES ('Leg Curl', 4, 12, 'legcurl.png', 1)";
 
     public static final String INSERT_EJERCICIO_6 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Elevacion de Talones', 4, 20, 'Elevacion_Talones.png', 1)";
+                    + "VALUES ('Elevacion de Talones', 4, 20, 'elevaciontalones.png', 1)";
 
     public static final String INSERT_EJERCICIO_7 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Halones Atras', 4, 15, 'Halones_Atras.png', 2))";
+                    + "VALUES ('Halones Atras', 4, 15, 'halonesatras.png', 2)";
 
     public static final String INSERT_EJERCICIO_8 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Remo al Piso', 4, 15, 'Remo_Piso.png', 2)";
+                    + "VALUES ('Remo al Piso', 4, 15, 'remopiso.png', 2)";
 
     public static final String INSERT_EJERCICIO_9 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Remo con Barra', 4, 15, 'Remo_Barra.png', 2)";
+                    + "VALUES ('Remo con Barra', 4, 15, 'remobarra.png', 2)";
 
     public static final String INSERT_EJERCICIO_10 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Press Inclinado', 4, 12, 'Press_Inclinado.png', 3)";
+                    + "VALUES ('Press Inclinado', 4, 12, 'pressinclinado.png', 3)";
 
     public static final String INSERT_EJERCICIO_11 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Peck Deck', 4, 12, 'Peck_Deck.png', 3)";
+                    + "VALUES ('Peck Deck', 4, 12, 'peckdeck.png', 3)";
 
     public static final String INSERT_EJERCICIO_12 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Elevaion Frontal', 4, 12, 'Elevacion_Frontal.png', 2)";
+                    + "VALUES ('Elevaion Frontal', 4, 12, 'elevacionfrontal.png', 2)";
 
     public static final String INSERT_EJERCICIO_13 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Elevacion Lateral', 4, 12, 'Elevacion_Lateral.png', 2)";
+                    + "VALUES ('Elevacion Lateral', 4, 12, 'elevacionlateral.png', 2)";
 
     public static final String INSERT_EJERCICIO_14 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('ADD', 4, 15, 'ADD.png', 1)";
+                    + "VALUES ('ADD', 4, 15, 'aductores.png', 1)";
 
     public static final String INSERT_EJERCICIO_15 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('ABD', 4, 15, 'abd.png', 1)";
+                    + "VALUES ('ABD', 4, 15, 'abductores.png', 1)";
 
     public static final String INSERT_EJERCICIO_16 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Curl Barra', 4, 12, 'Curl_Barra.png', 3)";
+                    + "VALUES ('Curl Barra', 4, 12, 'curlbarra.png', 3)";
 
     public static final String INSERT_EJERCICIO_17 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Curl Scott', 4, 12, 'Curl_Scott.png', 3)";
+                    + "VALUES ('Curl Scott', 4, 12, 'curlscott.png', 3)";
 
     public static final String INSERT_EJERCICIO_18 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Copa', 4, 12, 'Copa.png', 2)";
+                    + "VALUES ('Copa', 4, 12, 'copas.png', 2)";
 
     public static final String INSERT_EJERCICIO_19 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Crunch', 4, 20, 'Crunch.png', 3)";
+                    + "VALUES ('Crunch', 4, 20, 'crunchs.png', 3)";
 
     public static final String INSERT_EJERCICIO_20 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Elevacion de Piernas', 4, 20, 'Elevacion_Piernas.png', 3)";
+                    + "VALUES ('Elevacion de Piernas', 4, 20, 'elevacionpiernas.png', 3)";
 
     public static final String INSERT_EJERCICIO_21 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Patada de Rana', 4, 20, 'Patada_Rana.png', 3)";
+                    + "VALUES ('Patada de Rana', 4, 20, 'patadarana.png', 3)";
 
     public static final String INSERT_EJERCICIO_22 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Lumbares', 4, 15, 'Lumbares.png'. 2)";
+                    + "VALUES ('Lumbares', 4, 15, 'lumbar.png', 2)";
 
     public static final String INSERT_EJERCICIO_23 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Fondos', 4, 20, 'Fondos.png', 2)";
+                    + "VALUES ('Fondos', 4, 20, 'fondo.png', 2)";
 
     public static final String INSERT_EJERCICIO_24 =
             "INSERT INTO EJERCICIO(" + NOMBRE_EJERCICIO + " , " + SERIES + " , " + REPETICIONES + " , " + URL_IMAGEN + " , " + FK_ID_GRUPO + ") "
-                    + "VALUES ('Flexiones Codos', 4, 20, 'Flexiones_Codos.png', 3)";
+                    + "VALUES ('Flexiones Codos', 4, 20, 'flexionescodos.png', 3)";
 
 
     //Tabla de Grupo Ejercicio
@@ -169,7 +168,7 @@ public class InitDataBase extends SQLiteOpenHelper {
 
 
     // Variables Iniciales de la Clase
-    private static final String DB_NAME = "presbicia.sqlite";
+    private static final String DB_NAME = "myroutine.sqlite";
     private static final int DB_SCHEMA_VERSION = 1;
     Context contexto;
 
@@ -181,12 +180,15 @@ public class InitDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLE_EJERCICIO);
-        Log.d(TAG_LOG, "[InitDataBase] SQL: " + TABLE_EJERCICIO);
-        db.execSQL(TABLE_GRUPO_EJERCICIO);
-        Log.d(TAG_LOG, "[InitDataBase] SQL: " + TABLE_GRUPO_EJERCICIO);
+        db.execSQL(CREATE_TABLE_EJERCICIO);
+        Log.d(TAG_LOG, "[InitDataBase] SQL: " + CREATE_TABLE_EJERCICIO);
+        db.execSQL(CREATE_TABLE_GRUPO_EJERCICIO);
+        Log.d(TAG_LOG, "[InitDataBase] SQL: " + CREATE_TABLE_GRUPO_EJERCICIO);
         db.execSQL(CREATE_TABLE_HISTORIAL);
         Log.d(TAG_LOG, "[InitDataBase] SQL: " + CREATE_TABLE_HISTORIAL);
+        db.execSQL(INSERT_GRUPO_1);
+        db.execSQL(INSERT_GRUPO_2);
+        db.execSQL(INSERT_GRUPO_3);
         db.execSQL(INSERT_EJERCICIO_1);
         db.execSQL(INSERT_EJERCICIO_2);
         db.execSQL(INSERT_EJERCICIO_3);
@@ -211,10 +213,7 @@ public class InitDataBase extends SQLiteOpenHelper {
         db.execSQL(INSERT_EJERCICIO_22);
         db.execSQL(INSERT_EJERCICIO_23);
         db.execSQL(INSERT_EJERCICIO_24);
-        db.execSQL(INSERT_GRUPO_1);
-        db.execSQL(INSERT_GRUPO_2);
-        db.execSQL(INSERT_GRUPO_3);
-        Log.i(TAG_LOG, "Base de Datos creada satisfactoriamente.");
+        Log.i(TAG_LOG, "[InitDataBase] Base de Datos creada satisfactoriamente.");
     }
 
     @Override

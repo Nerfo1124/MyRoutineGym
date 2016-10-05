@@ -28,4 +28,13 @@
         android:layout_below="@+id/avatar"
         android:textAlignment="center" />
 
+    <TextView
+        android:text="SeriesXRepeticiones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSerieRepeticion"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
 </LinearLayout>

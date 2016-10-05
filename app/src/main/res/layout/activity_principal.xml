@@ -18,28 +18,8 @@
         android:layout_alignParentStart="true"
         android:id="@+id/txtGrupoEjercicio"
         tools:textSize="30sp"
-        android:textAlignment="center" />
-
-    <Button
-        android:text="Rutina de Brazo y Abdomen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnGrupoTres"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:textSize="18sp"
-        android:onClick="viewGrupoTres (Principal)" />
-
-    <Button
-        android:text="Rutina de Pierna"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnGrupoUno"
-        android:layout_above="@+id/btnGrupoDos"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="15dp"
-        android:textSize="18sp"
-        android:onClick="viewGrupoUno (Principal)" />
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <Button
         android:text="Rutina de Hombros y Espalda"
@@ -49,6 +29,28 @@
         android:layout_marginBottom="16dp"
         android:layout_above="@+id/btnGrupoTres"
         android:layout_alignParentStart="true"
-        android:textSize="18sp"
-        android:onClick="viewGrupoDos (Principal)" />
+        android:textSize="30sp"
+        android:onClick="viewGrupoDos" />
+
+    <Button
+        android:text="Rutina de Pierna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGrupoUno"
+        android:textSize="30sp"
+        android:onClick="viewGrupoUno"
+        android:layout_above="@+id/btnGrupoDos"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp" />
+
+    <Button
+        android:text="Rutina de Brazo y Abdomen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGrupoTres"
+        android:textSize="30sp"
+        android:onClick="viewGrupoTres"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="138dp" />
 </RelativeLayout>
