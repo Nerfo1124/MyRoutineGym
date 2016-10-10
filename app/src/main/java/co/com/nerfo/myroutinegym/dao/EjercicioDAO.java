@@ -38,7 +38,8 @@ public class EjercicioDAO {
             List<EjercicioVO> listaEjercicios = new ArrayList<>();
             StringBuilder sql = new StringBuilder();
             sql.append("SELECT ").append(dbh.ID_EJERCICIO+", ").append(dbh.NOMBRE_EJERCICIO+", ");
-            sql.append(dbh.SERIES+", ").append(dbh.REPETICIONES+", ").append(dbh.URL_IMAGEN);
+            sql.append(dbh.SERIES+", ").append(dbh.REPETICIONES+", ").append(dbh.URL_IMAGEN+", ");
+            sql.append(dbh.PESO);
             sql.append(" FROM ").append(dbh.TABLE_EJERCICIO);
             sql.append(" WHERE ").append(dbh.FK_ID_GRUPO).append(" = ").append(idGrupoEjercicio);
 
@@ -53,6 +54,7 @@ public class EjercicioDAO {
                     vo.setSeries(listEjercicios.getInt(2));
                     vo.setRepeticiones(listEjercicios.getInt(3));
                     vo.setUrlImagen(listEjercicios.getString(4));
+                    vo.setPeso(listEjercicios.getInt(5));
                     listaEjercicios.add(vo);
                 } while (listEjercicios.moveToNext());
             }
@@ -61,5 +63,53 @@ public class EjercicioDAO {
             Log.e(TAG_LOG, "[listByIdGrupo] Errror en EjercicioDAO: ", ex);
             return null;
         }
+    }
+
+    public EjercicioVO excersiseById(Integer idEjercicio){
+        try {
+            EjercicioVO vo = new EjercicioVO();
+            StringBuilder sql = new StringBuilder();
+            sql.append("SELECT ").append(dbh.ID_EJERCICIO+", ").append(dbh.NOMBRE_EJERCICIO+", ");
+            sql.append(dbh.SERIES+", ").append(dbh.REPETICIONES+", ").append(dbh.URL_IMAGEN+", ");
+            sql.append(dbh.PESO);
+            sql.append(" FROM ").append(dbh.TABLE_EJERCICIO);
+            sql.append(" WHERE ").append(dbh.ID_EJERCICIO).append(" = ").append(idEjercicio);
+
+            Log.i(TAG_LOG, "[listByIdGrupo] SQL: " + sql.toString());
+
+            Cursor listEjercicios = db.rawQuery(sql.toString(), null);
+            if (listEjercicios.moveToFirst()) {
+                vo.setIdEjercicio(listEjercicios.getInt(0));
+                vo.setNombreEjercicio(listEjercicios.getString(1));
+                vo.setSeries(listEjercicios.getInt(2));
+                vo.setRepeticiones(listEjercicios.getInt(3));
+                vo.setUrlImagen(listEjercicios.getString(4));
+                vo.setPeso(listEjercicios.getInt(5));
+            }
+            return vo;
+        } catch (Exception ex) {
+            Log.e(TAG_LOG, "[listByIdGrupo] Errror en EjercicioDAO: ", ex);
+            return null;
+        }
+    }
+
+    public Boolean registrarEjercicioEnGrupo(EjercicioVO vo) {
+        Boolean response = Boolean.FALSE;
+        try {
+            StringBuilder sb = new StringBuilder();
+            sb.append("UPDATE ").append(dbh.TABLE_EJERCICIO).append(" SET ");
+            sb.append(dbh.SERIES).append(" = ").append(vo.getSeries()).append(", ");
+            sb.append(dbh.REPETICIONES).append(" = ").append(vo.getRepeticiones()).append(", ");
+            sb.append(dbh.PESO).append(" = ").append(vo.getPeso()).append(", ");
+            sb.append(dbh.FK_ID_GRUPO).append(" = ").append(vo.getIdGrupo());
+            sb.append(" WHERE ").append(dbh.ID_EJERCICIO).append(" = ").append(vo.getIdEjercicio());
+            Log.i(TAG_LOG, "SQL: " + sb.toString());
+
+            db.execSQL(sb.toString());
+            response = Boolean.TRUE;
+        } catch (Exception ex) {
+            Log.e(TAG_LOG, "[registrarEjercicioEnGrupo] Error: ", ex);
+        }
+        return response;
     }
 }

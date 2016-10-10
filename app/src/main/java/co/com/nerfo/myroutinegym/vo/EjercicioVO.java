@@ -11,17 +11,19 @@ public class EjercicioVO {
     private Integer series;
     private Integer repeticiones;
     private String urlImagen;
+    private Integer peso;
     private Integer idGrupo;
 
     public EjercicioVO() {
     }
 
-    public EjercicioVO(Integer idEjercicio, String nombreEjercicio, Integer series, Integer repeticiones, String urlImagen, Integer idGrupo) {
+    public EjercicioVO(Integer idEjercicio, String nombreEjercicio, Integer series, Integer repeticiones, String urlImagen, Integer peso, Integer idGrupo) {
         this.idEjercicio = idEjercicio;
         this.nombreEjercicio = nombreEjercicio;
         this.series = series;
         this.repeticiones = repeticiones;
         this.urlImagen = urlImagen;
+        this.peso = peso;
         this.idGrupo = idGrupo;
     }
 
@@ -63,6 +65,14 @@ public class EjercicioVO {
 
     public void setUrlImagen(String urlImagen) {
         this.urlImagen = urlImagen;
+    }
+
+    public Integer getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Integer peso) {
+        this.peso = peso;
     }
 
     public Integer getIdGrupo() {

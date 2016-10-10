@@ -13,7 +13,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import co.com.nerfo.myroutinegym.R;
-import co.com.nerfo.myroutinegym.dao.EjercicioDAO;
 import co.com.nerfo.myroutinegym.vo.EjercicioVO;
 
 /**
@@ -45,11 +44,13 @@ public class ArrayAdapter extends android.widget.ArrayAdapter<EjercicioVO> {
 
         // Se agregan objetos a la lista principal.
         friendInfoView = inflater.inflate(R.layout.layout_excersise, parent, false);
-        TextView txtEjercicio = (TextView) friendInfoView.findViewById(R.id.txtNameEjercicio);
+        TextView txtEjercicio = (TextView) friendInfoView.findViewById(R.id.txtEjercicio);
         TextView txtSerieRepeticion = (TextView) friendInfoView.findViewById(R.id.txtSerieRepeticion);
+        TextView txtPeso = (TextView) friendInfoView.findViewById(R.id.txtPeso);
 
         txtEjercicio.setText(ejercicioList.get(position).getNombreEjercicio());
         txtSerieRepeticion.setText("Series: "+ejercicioList.get(position).getSeries()+" - Repeticiones: "+ejercicioList.get(position).getRepeticiones());
+        txtPeso.setText("Peso: " + ejercicioList.get(position).getPeso());
 
         // Fragmento de codigo encargado de asignar una imagen al imageView
         ImageView imageView = (ImageView) friendInfoView.findViewById(R.id.avatar);

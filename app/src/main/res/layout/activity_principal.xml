@@ -53,4 +53,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="138dp" />
+
+    <Button
+        android:text="Registrar Nuevo Ejercicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:id="@+id/button"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="viewNewExercise" />
 </RelativeLayout>

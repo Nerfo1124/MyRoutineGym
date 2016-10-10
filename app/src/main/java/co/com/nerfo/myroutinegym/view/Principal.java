@@ -35,4 +35,10 @@ public class Principal extends AppCompatActivity {
         Log.i(LOG_TAG,"Direccionando al grupo tres...");
         startActivity(intent);
     }
+
+    public void viewNewExercise(View v){
+        Intent intent  = new Intent(this,Ejercicios.class);
+        Log.i(LOG_TAG,"Direccionando al grupo tres...");
+        startActivity(intent);
+    }
 }

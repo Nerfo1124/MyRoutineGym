@@ -18,6 +18,8 @@
         <activity android:name=".view.GrupoUno" />
         <activity android:name=".view.GrupoDos" />
         <activity android:name=".view.GrupoTres" />
+        <activity android:name=".view.Ejercicios" />
+        <activity android:name=".view.RegistrarEjercicio"></activity>
     </application>
 
 </manifest>

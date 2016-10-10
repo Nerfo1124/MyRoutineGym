@@ -20,7 +20,7 @@
         android:layout_weight="0.21" />
 
     <TextView
-        android:id="@+id/txtNameEjercicio"
+        android:id="@+id/txtEjercicio"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Titulo Ejercicio"
@@ -36,5 +36,14 @@
         android:textSize="24sp"
         android:textAlignment="center"
         android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPeso"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
 
 </LinearLayout>
